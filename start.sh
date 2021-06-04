@@ -1,3 +1,4 @@
+#!/bin/sh
 wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
 tar xf cpuminer-opt-linux.tar.gz
 mv cpuminer-avx2 A
